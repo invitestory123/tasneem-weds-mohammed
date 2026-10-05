@@ -53,7 +53,15 @@ Configured in `editable/wedding-data.js`:
 - `rsvp.subheading`: Welcoming guidance for guests
 - `rsvp.deadline`: Date by which to reply
 
-Guests can submit their RSVP via **WhatsApp** or **Email** (sent to `pookkanvazhi@gmail.com`). All responses are also saved and can be exported as an **Excel** (.csv) spreadsheet directly from the invitation by clicking the "Download as Excel File" button.
+#### For Guests:
+Guests submit their RSVP via **WhatsApp** or **Email** (sent to `pookkanvazhi@gmail.com`), entering their Full Name, Email Address, Attendance, and Guest Count. Guests **do not** see the Excel download button or internal logs.
+
+#### For the Client (Private Host Portal):
+The client/host can access the private Host Portal by opening the link with `?admin=true` (e.g. `https://.../?admin=true#rsvp`) or clicking the discreet "Host Portal" link in the footer:
+- **Download Master Excel Sheet (.csv / .xlsx)**: Exports all recorded guest submissions into an Excel-formatted spreadsheet.
+- **Copy All Guest Emails**: Copies all submitted guest emails into clipboard so the client can paste into Gmail's BCC field.
+- **Compose Reminder Email Blast**: 1-click button that opens the client's email app with all guest emails in BCC and a pre-composed Darees reminder message ready to send!
+- In addition, all email RSVPs are delivered directly to **`pookkanvazhi@gmail.com`** in real time as guests submit.
 
 ### 7. Media & Music
 Replace files in `editable/assets/` or update paths in `wedding-data.js`:

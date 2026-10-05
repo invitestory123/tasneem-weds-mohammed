@@ -1,11 +1,18 @@
 import{a as e,i as t,n,r,t as i}from"./index-Dosgw5rC.js";var a=e(t(),1),o=r();function s({count:e=26,className:t=``}){let n=(0,a.useMemo)(()=>Array.from({length:e},(t,n)=>({left:(n+.5)/e*100+n%3*.6,delay:n%7*1.1+n%3*.4,duration:7+n%5*1.6,height:22+n%4*12,opacity:.25+n%4*.18})),[e]);return(0,o.jsx)(`div`,{"aria-hidden":!0,className:`pointer-events-none absolute inset-0 overflow-hidden ${t}`,children:n.map((e,t)=>(0,o.jsx)(`span`,{className:`absolute top-0 w-px`,style:{left:`${e.left}%`,height:`${e.height}%`,opacity:e.opacity,background:`linear-gradient(180deg, transparent, #ffffff 30%, #f6e3ab 60%, transparent)`,animation:`rain-light ${e.duration}s linear ${e.delay}s infinite`}},t))})}function c(e=.18){let t=(0,a.useRef)(null),[n,r]=(0,a.useState)(!1);return(0,a.useEffect)(()=>{let i=t.current;if(!i||n)return;let a=new IntersectionObserver(e=>{e.some(e=>e.isIntersecting)&&(r(!0),a.disconnect())},{threshold:e,rootMargin:`0px 0px -8% 0px`});return a.observe(i),()=>a.disconnect()},[n,e]),{ref:t,shown:n}}function l(){let[e,t]=(0,a.useState)(!1);return(0,a.useEffect)(()=>{let e=window.matchMedia(`(prefers-reduced-motion: reduce)`);t(e.matches);let n=()=>t(e.matches);return e.addEventListener(`change`,n),()=>e.removeEventListener(`change`,n)},[]),e}function u(e=.2){let t=(0,a.useRef)(null),n=l();return(0,a.useEffect)(()=>{if(n)return;let r=0,i=()=>{r||=requestAnimationFrame(()=>{r=0;let n=t.current;if(!n)return;let i=n.getBoundingClientRect(),a=(i.top+i.height/2-window.innerHeight/2)*-e;n.style.transform=`translate3d(0, ${a.toFixed(2)}px, 0)`})};return i(),window.addEventListener(`scroll`,i,{passive:!0}),()=>{window.removeEventListener(`scroll`,i),r&&cancelAnimationFrame(r)}},[n,e]),t}function d({children:e,delay:t=0,className:n=``,as:r=`div`}){let{ref:i,shown:a}=c();return(0,o.jsx)(r,{ref:i,className:`reveal ${a?`reveal-on`:``} ${n}`,style:{transitionDelay:`${t}ms`},children:e})}function f(e){let t=Math.max(0,e-Date.now());return{days:Math.floor(t/864e5),hours:Math.floor(t/36e5)%24,minutes:Math.floor(t/6e4)%60,seconds:Math.floor(t/1e3)%60}}function p({countdownTarget:e,dateLabel:t}){let r=new Date(e).getTime(),[i,s]=(0,a.useState)(()=>f(r));(0,a.useEffect)(()=>{let e=()=>s(f(r));e();let t=window.setInterval(e,1e3);return()=>window.clearInterval(t)},[r]);let c=[[i.days,`days`],[i.hours,`hours`],[i.minutes,`minutes`],[i.seconds,`seconds`]];return(0,o.jsx)(`section`,{className:`story-editorial`,"aria-labelledby":`story-and-countdown-title`,children:(0,o.jsxs)(`div`,{className:`story-editorial__copy`,children:[(0,o.jsxs)(d,{children:[(0,o.jsx)(`p`,{className:`section-kicker`,children:n.storyKicker||`Bismillah hir-Rahman nir-Rahim`}),(0,o.jsx)(`h2`,{id:`story-and-countdown-title`,children:n.storyTitle||`A Sacred Celebration of Blessings`})]}),(0,o.jsx)(d,{delay:120,children:(0,o.jsxs)(`div`,{className:`story-editorial__prose`,children:[(0,o.jsx)(`p`,{children:n.story[0]}),(0,o.jsx)(`p`,{children:n.story[1]})]})}),(0,o.jsxs)(d,{delay:220,children:[(0,o.jsx)(`p`,{className:`countdown-label`,children:n.countdownLabel||`Until the Darees`}),(0,o.jsx)(`div`,{className:`editorial-countdown`,"aria-label":`Countdown to the Darees`,children:c.map(([e,t])=>(0,o.jsxs)(`div`,{children:[(0,o.jsx)(`span`,{children:String(e).padStart(2,`0`)}),(0,o.jsx)(`small`,{children:t})]},t))}),(0,o.jsx)(`p`,{className:`story-date`,children:t})]})]})})}function m(){let[e,t]=(0,a.useState)(0),r=n.events[e]||n.events[0];return(0,o.jsxs)(`section`,{className:`celebrations-editorial`,"aria-labelledby":`celebrations-title`,children:[(0,o.jsxs)(d,{className:`celebrations-editorial__heading`,children:[(0,o.jsx)(`p`,{className:`section-kicker`,children:n.eventsKicker||`Auspicious Gathering`}),(0,o.jsx)(`h2`,{id:`celebrations-title`,children:n.eventsTitle||`Darees Mubarak`}),(0,o.jsx)(`p`,{children:n.eventsSubtitle||`An evening of prayers, Salawaat, and Khushi nu Jaman celebrations.`})]}),(0,o.jsxs)(`div`,{className:`celebration-stage`,children:[(0,o.jsx)(`div`,{className:`celebration-stage__wash`,"aria-hidden":!0}),(0,o.jsxs)(`div`,{className:`celebration-stage__content`,children:[(0,o.jsxs)(`span`,{className:`event-number`,children:[`0`,e+1]}),(0,o.jsxs)(`p`,{children:[r.date,` · `,r.time]}),(0,o.jsx)(`h3`,{children:r.name}),(0,o.jsx)(`p`,{className:`event-note`,children:r.note}),(0,o.jsx)(`p`,{className:`event-venue`,children:r.venue})]},r.name)]}),(0,o.jsx)(`div`,{className:`celebration-selector`,role:`tablist`,"aria-label":`Darees celebration`,children:n.events.map((n,r)=>(0,o.jsxs)(`button`,{type:`button`,role:`tab`,"aria-selected":e===r,className:e===r?`is-active`:``,onClick:()=>t(r),children:[(0,o.jsxs)(`span`,{children:[`0`,r+1]}),n.name]},n.name))})]})}var _wm=(typeof n<"u"&&n.media)||(typeof window<"u"&&window.WEDDING_DATA&&window.WEDDING_DATA.media)||{};var h=_wm.petals||`editable/assets/petals.png`,g=[{id:`story`,label:`Blessings`},{id:`celebrations`,label:`Darees`},{id:`venue`,label:`Venue`},{id:`rsvp`,label:`RSVP`}];function _(){let[e,t]=(0,a.useState)(0),[n,r]=(0,a.useState)(0);return(0,a.useEffect)(()=>{let e=()=>{let e=document.documentElement.scrollHeight-window.innerHeight;r(e>0?window.scrollY/e:0);let n=window.innerHeight*.42,i=g.reduce((e,t,r)=>{let i=document.getElementById(t.id);return i&&i.getBoundingClientRect().top<=n?r:e},0);t(i)};return e(),window.addEventListener(`scroll`,e,{passive:!0}),window.addEventListener(`resize`,e),()=>{window.removeEventListener(`scroll`,e),window.removeEventListener(`resize`,e)}},[]),(0,o.jsxs)(`nav`,{className:`experience-rail`,"aria-label":`Invitation sections`,children:[(0,o.jsx)(`span`,{className:`experience-rail__track`,"aria-hidden":!0,children:(0,o.jsx)(`span`,{style:{transform:`scaleY(${n})`}})}),g.map((t,n)=>(0,o.jsxs)(`button`,{type:`button`,className:e===n?`is-active`:``,onClick:()=>document.getElementById(t.id)?.scrollIntoView({behavior:`smooth`}),"aria-label":`Go to ${t.label}`,"aria-current":e===n?`location`:void 0,children:[(0,o.jsx)(`span`,{children:t.label}),(0,o.jsx)(`i`,{})]},t.id))]})}function v(){let e=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let t=e.current;if(!t||window.matchMedia(`(pointer: coarse)`).matches)return;let n=e=>{t.animate({transform:`translate3d(${e.clientX-230}px, ${e.clientY-230}px, 0)`},{duration:900,fill:`forwards`,easing:`cubic-bezier(.2,.8,.2,1)`})};return window.addEventListener(`pointermove`,n,{passive:!0}),()=>window.removeEventListener(`pointermove`,n)},[]),(0,o.jsx)(`div`,{ref:e,className:`cursor-aura`,"aria-hidden":!0})}function y(){return(0,o.jsx)(`div`,{className:`petal-veil`,"aria-hidden":!0,children:(0,o.jsx)(`img`,{src:h,alt:``})})}var b=_wm.hall||`editable/assets/hall.png`,x=_wm.cover||`editable/assets/cover.png`,S=_wm.introVideo||`editable/assets/intro.mp4`,C=_wm.coupleVideo||`editable/assets/couple.mp4`,w=_wm.divider||`editable/assets/divider.png`,T=_wm.floral||`editable/assets/floral.png`,U_AUDIO=_wm.audio||`editable/assets/mast-magan-instrumental.mp3`;function E({className:e=``,width:t=260}){return(0,o.jsx)(`img`,{src:w,alt:``,"aria-hidden":!0,loading:`lazy`,width:1200,height:512,className:`mx-auto h-auto opacity-80 ${e}`,style:{width:t}})}function D({open:e,onOpen:t}){return(0,o.jsxs)(`div`,{onClick:t,className:`fixed inset-0 z-50 flex cursor-pointer items-center justify-center overflow-hidden bg-black select-none transition-opacity duration-700 ${e?`pointer-events-none opacity-0`:`opacity-100`}`,"aria-hidden":e,children:[(0,o.jsx)(`img`,{src:x,alt:`Royal Wedding Invitation Cover`,className:`absolute inset-0 h-full w-full object-cover object-center transition-transform duration-1000 scale-100 hover:scale-[1.02]`,fetchPriority:`high`}),(0,o.jsx)(`div`,{className:`pointer-events-none absolute inset-0`,style:{background:`radial-gradient(ellipse at center, rgba(140,98,24,0.3) 0%, rgba(85,55,12,0.75) 80%, rgba(40,24,5,0.92) 100%)`}}),(0,o.jsx)(s,{count:16}),(0,o.jsx)(`div`,{className:`relative z-10 flex flex-col items-center gap-4 px-6 text-center`,children:(0,o.jsxs)(`button`,{type:`button`,onClick:e=>{e.stopPropagation(),t()},className:`press group relative flex items-center gap-3 rounded-full border border-white/70 bg-[#3a250a]/90 px-8 py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.8),0_0_24px_rgba(255,235,175,0.5)] backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-[#503410]/95 cursor-pointer`,children:[(0,o.jsx)(`span`,{className:`flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-white shadow-[0_0_12px_rgba(255,255,255,0.7)]`,children:(0,o.jsx)(`svg`,{viewBox:`0 0 24 24`,className:`h-3.5 w-3.5 fill-current ml-0.5`,children:(0,o.jsx)(`path`,{d:`M8 5v14l11-7z`})})}),(0,o.jsx)(`span`,{className:`font-title text-[0.72rem] uppercase tracking-[0.38em] text-white`,children:`Tap To Open`})]})})]})}
 function W_RSVP(){
   let [guestName,setGuestName]=(0,a.useState)(""),
+      [guestEmail,setGuestEmail]=(0,a.useState)(""),
       [attendance,setAttendance]=(0,a.useState)("yes"),
       [guestCount,setGuestCount]=(0,a.useState)(1),
       [phone,setPhone]=(0,a.useState)(""),
       [wishes,setWishes]=(0,a.useState)(""),
       [statusMsg,setStatusMsg]=(0,a.useState)(""),
+      [isAdmin,setIsAdmin]=(0,a.useState)(()=>{
+        if(typeof window==="undefined") return false;
+        let s = window.location.search || "", h = window.location.hash || "";
+        return s.includes("admin") || h.includes("admin") || localStorage.getItem("darees_admin_access") === "true";
+      }),
+      [copiedNotice,setCopiedNotice]=(0,a.useState)(""),
       [totalSaved,setTotalSaved]=(0,a.useState)(()=>{
         try {
           return JSON.parse(localStorage.getItem("darees_rsvp_responses")||"[]").length;
@@ -26,6 +33,7 @@ function W_RSVP(){
         timestamp: new Date().toISOString(),
         date: new Date().toLocaleString(),
         name: guestName.trim(),
+        email: guestEmail.trim() || "-",
         attendance: attendance === "yes" ? "Joyfully Accepts" : "Regretfully Declines",
         guests: attendance === "yes" ? (Number(guestCount)||1) : 0,
         contact: phone.trim() || "-",
@@ -54,8 +62,9 @@ function W_RSVP(){
       "🌙 *Darees Mubarak RSVP — " + coupleName + "* 🌙",
       "",
       "*Guest Name:* " + guestName.trim(),
+      guestEmail.trim() ? ("*Guest Email:* " + guestEmail.trim()) : "",
       "*Response:* " + (isYes ? "Joyfully Accepts (With Barakah) ✨" : "Regretfully Declines"),
-    ];
+    ].filter(Boolean);
     if (isYes) lines.push("*Number of Guests:* " + guestCount);
     if (phone.trim()) lines.push("*Contact:* " + phone.trim());
     if (wishes.trim()) lines.push("*Dua & Wishes:* " + wishes.trim());
@@ -72,7 +81,11 @@ function W_RSVP(){
   let onEmail = (e) => {
     if (e && e.preventDefault) e.preventDefault();
     if (!guestName.trim()) {
-      setStatusMsg("Please enter your full name before sending RSVP.");
+      setStatusMsg("Please enter your full name.");
+      return;
+    }
+    if (!guestEmail.trim() || !guestEmail.includes("@")) {
+      setStatusMsg("Please provide your email address so the host can confirm your RSVP and send reminders.");
       return;
     }
     saveEntry("Email");
@@ -85,17 +98,18 @@ function W_RSVP(){
       "Venue: " + (data.venue ? data.venue.name : "Dawoodi Bohra Al Masjid Al Saifee Anjuman-e-Burhani (Toronto)"),
       "",
       "Guest Name: " + guestName.trim(),
+      "Guest Email: " + guestEmail.trim(),
       "Response: " + (isYes ? "Joyfully Accepts" : "Regretfully Declines")
     ];
     if (isYes) bodyLines.push("Number of Guests Attending: " + guestCount);
-    if (phone.trim()) bodyLines.push("Contact: " + phone.trim());
+    if (phone.trim()) bodyLines.push("Contact Phone: " + phone.trim());
     if (wishes.trim()) bodyLines.push("Dua & Wishes: " + wishes.trim());
     bodyLines.push("");
     bodyLines.push("Submitted on: " + new Date().toLocaleString());
 
     let mailtoUrl = "mailto:" + targetEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyLines.join("\n"));
     window.location.href = mailtoUrl;
-    setStatusMsg("Email opened to send RSVP directly to " + targetEmail + "!");
+    setStatusMsg("Email opened to send your RSVP directly to " + targetEmail + "! Thank you!");
   };
 
   let onDownloadExcel = () => {
@@ -104,20 +118,22 @@ function W_RSVP(){
       if (!list || list.length === 0) {
         list = [{
           date: new Date().toLocaleString(),
-          name: guestName.trim() || "Tasneem & Mohammed Guest",
-          attendance: attendance === "yes" ? "Joyfully Accepts" : "Regretfully Declines",
-          guests: attendance === "yes" ? (Number(guestCount)||1) : 0,
-          contact: phone.trim() || "pookkanvazhi@gmail.com",
-          wishes: wishes.trim() || "Mubarak & Heartfelt Duas",
-          method: "Direct / Sample"
+          name: "Sample Guest (Example)",
+          email: "guest@example.com",
+          attendance: "Joyfully Accepts",
+          guests: 2,
+          contact: "+1 416-555-0199",
+          wishes: "Mubarak & Heartfelt Duas to Tasneem & Mohammed",
+          method: "Email RSVP"
         }];
       }
-      let headers = ["Timestamp","Guest Name","Attendance","Guests Count","Contact Info","Dua & Wishes","RSVP Mode"];
+      let headers = ["Timestamp","Guest Name","Guest Email","Attendance Status","Number of Guests","Phone / Contact","Dua & Wishes","Submission Channel"];
       let rows = [headers.map(h => '"' + h.replace(/"/g, '""') + '"').join(",")];
       list.forEach(item => {
         let row = [
           item.date || "",
           item.name || "",
+          item.email || "",
           item.attendance || "",
           String(item.guests ?? ""),
           item.contact || "",
@@ -131,15 +147,53 @@ function W_RSVP(){
       let url = URL.createObjectURL(blob);
       let link = document.createElement("a");
       link.href = url;
-      link.download = "Tasneem-Mohammed-Darees-RSVP-Responses.csv";
+      link.download = "Tasneem-Mohammed-Darees-RSVP-Master-List.csv";
       document.body.appendChild(link);
       link.click();
       link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
-      setStatusMsg("RSVP Excel file (CSV format) downloaded successfully!");
+      setCopiedNotice("Excel file (.csv) downloaded successfully!");
+      setTimeout(() => setCopiedNotice(""), 4000);
     } catch(err) {
       console.error(err);
-      setStatusMsg("Could not export RSVP list.");
+      setCopiedNotice("Could not export Excel file.");
+    }
+  };
+
+  let onCopyAllEmails = () => {
+    try {
+      let list = JSON.parse(localStorage.getItem("darees_rsvp_responses")||"[]");
+      let emails = list.map(i => (i.email || "").trim()).filter(e => e && e.includes("@") && e !== "-");
+      let uniqueEmails = Array.from(new Set(emails));
+      if (uniqueEmails.length === 0) {
+        setCopiedNotice("No guest emails collected yet in this browser.");
+        setTimeout(() => setCopiedNotice(""), 3000);
+        return;
+      }
+      let emailText = uniqueEmails.join(", ");
+      navigator.clipboard.writeText(emailText).then(() => {
+        setCopiedNotice("Copied " + uniqueEmails.length + " guest email(s) to clipboard!");
+        setTimeout(() => setCopiedNotice(""), 4000);
+      }).catch(() => {
+        prompt("Copy guest emails for reminder:", emailText);
+      });
+    } catch(e) {
+      console.error(e);
+    }
+  };
+
+  let onSendReminderEmail = () => {
+    try {
+      let list = JSON.parse(localStorage.getItem("darees_rsvp_responses")||"[]");
+      let emails = list.map(i => (i.email || "").trim()).filter(e => e && e.includes("@") && e !== "-");
+      let uniqueEmails = Array.from(new Set(emails));
+      let bccList = uniqueEmails.join(",");
+      let subject = "Reminder: Auspicious Darees Mubarak of Tasneem & Mohammed — Sept 25, 2027";
+      let body = "Dear Guests,\n\nThis is a warm reminder for the upcoming auspicious Darees Mubarak of Tasneem & Mohammed!\n\nDate: Saturday, September 25, 2027 at 7:00 PM\nVenue: Dawoodi Bohra Al Masjid Al Saifee Anjuman-e-Burhani (Toronto)\n8929 Bayview Ave, Richmond Hill, ON L4B 4W4\nProgram: Darees Mubarak followed by Khushi nu Jaman & blessings.\n\nWe eagerly await your gracious presence and heartfelt prayers!\n\nWith love and duas,\nTasneem & Mohammed and Families";
+      let mailtoUrl = "mailto:" + targetEmail + "?bcc=" + encodeURIComponent(bccList) + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      window.location.href = mailtoUrl;
+    } catch(e) {
+      console.error(e);
     }
   };
 
@@ -185,7 +239,7 @@ function W_RSVP(){
               style: { background: "linear-gradient(180deg, rgba(65, 42, 13, 0.9) 0%, rgba(42, 26, 7, 0.95) 100%)" },
               children: [
                 (0,o.jsxs)("div", {
-                  className: "mb-5",
+                  className: "mb-4",
                   children: [
                     (0,o.jsx)("label", {
                       htmlFor: "rsvp-name-input",
@@ -204,7 +258,26 @@ function W_RSVP(){
                   ]
                 }),
                 (0,o.jsxs)("div", {
-                  className: "mb-5",
+                  className: "mb-4",
+                  children: [
+                    (0,o.jsx)("label", {
+                      htmlFor: "rsvp-email-input",
+                      className: "block font-title text-[0.68rem] uppercase tracking-[0.24em] text-white mb-2",
+                      children: "Your Email Address *"
+                    }),
+                    (0,o.jsx)("input", {
+                      id: "rsvp-email-input",
+                      type: "email",
+                      required: !0,
+                      value: guestEmail,
+                      onChange: (e) => setGuestEmail(e.target.value),
+                      placeholder: "yourname@example.com (for event reminders)",
+                      className: "w-full rounded-md border border-white/50 bg-[#251707]/80 px-4 py-3 text-[0.95rem] text-white placeholder-white/40 outline-none focus:border-[#f6e3ab] focus:ring-1 focus:ring-[#f6e3ab]"
+                    })
+                  ]
+                }),
+                (0,o.jsxs)("div", {
+                  className: "mb-4",
                   children: [
                     (0,o.jsx)("label", {
                       className: "block font-title text-[0.68rem] uppercase tracking-[0.24em] text-white mb-2",
@@ -216,7 +289,7 @@ function W_RSVP(){
                         (0,o.jsxs)("button", {
                           type: "button",
                           onClick: () => setAttendance("yes"),
-                          className: "press flex items-center justify-center gap-2 rounded-md border rsvp-attendance-btn py-1.5 px-2.5 text-[0.62rem] uppercase tracking-[0.12em] transition-all cursor-pointer " + (attendance === "yes" ? "border-[#ffd875] bg-[#755018] text-white font-semibold shadow-[0_0_15px_rgba(255,216,117,0.35)]" : "border-white/30 bg-[#2b1b0a]/70 text-white/80"),
+                          className: "press rsvp-attendance-btn flex items-center justify-center gap-1.5 rounded-md border py-1.5 px-2.5 text-[0.62rem] uppercase tracking-[0.12em] transition-all cursor-pointer " + (attendance === "yes" ? "border-[#ffd875] bg-[#755018] text-white font-semibold shadow-[0_0_15px_rgba(255,216,117,0.35)]" : "border-white/30 bg-[#2b1b0a]/70 text-white/80"),
                           children: [
                             (0,o.jsx)("span", { children: "✓" }),
                             (0,o.jsx)("span", { children: "Joyfully Accepts" })
@@ -225,7 +298,7 @@ function W_RSVP(){
                         (0,o.jsxs)("button", {
                           type: "button",
                           onClick: () => setAttendance("no"),
-                          className: "press flex items-center justify-center gap-2 rounded-md border rsvp-attendance-btn py-1.5 px-2.5 text-[0.62rem] uppercase tracking-[0.12em] transition-all cursor-pointer " + (attendance === "no" ? "border-[#ffd875] bg-[#755018] text-white font-semibold shadow-[0_0_15px_rgba(255,216,117,0.35)]" : "border-white/30 bg-[#2b1b0a]/70 text-white/80"),
+                          className: "press rsvp-attendance-btn flex items-center justify-center gap-1.5 rounded-md border py-1.5 px-2.5 text-[0.62rem] uppercase tracking-[0.12em] transition-all cursor-pointer " + (attendance === "no" ? "border-[#ffd875] bg-[#755018] text-white font-semibold shadow-[0_0_15px_rgba(255,216,117,0.35)]" : "border-white/30 bg-[#2b1b0a]/70 text-white/80"),
                           children: [
                             (0,o.jsx)("span", { children: "✕" }),
                             (0,o.jsx)("span", { children: "Regretfully Declines" })
@@ -236,7 +309,7 @@ function W_RSVP(){
                   ]
                 }),
                 attendance === "yes" && (0,o.jsxs)("div", {
-                  className: "mb-5",
+                  className: "mb-4",
                   children: [
                     (0,o.jsx)("label", {
                       htmlFor: "rsvp-count-input",
@@ -255,7 +328,7 @@ function W_RSVP(){
                   ]
                 }),
                 (0,o.jsxs)("div", {
-                  className: "mb-5",
+                  className: "mb-4",
                   children: [
                     (0,o.jsx)("label", {
                       htmlFor: "rsvp-phone-input",
@@ -321,7 +394,7 @@ function W_RSVP(){
                             d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
                           })
                         }),
-                        (0,o.jsx)("span", { children: "RSVP via Email (" + targetEmail + ")" })
+                        (0,o.jsx)("span", { children: "RSVP via Email" })
                       ]
                     })
                   ]
@@ -330,34 +403,83 @@ function W_RSVP(){
                   role: "status",
                   className: "mt-4 text-center font-body text-[0.82rem] text-[#ffd875] bg-[#422908]/90 p-2.5 rounded border border-[#ffd875]/40",
                   children: statusMsg
-                }),
+                })
+              ]
+            })
+          }),
+          // Client Host Portal (Rendered only for client when ?admin=true or #admin)
+          isAdmin && (0,o.jsx)(d, {
+            delay: 400,
+            className: "mt-10",
+            children: (0,o.jsxs)("div", {
+              className: "client-admin-portal text-left mx-auto max-w-md p-6 rounded-xl border border-[#ffd875]/60 bg-[#251605]/95 shadow-[0_0_35px_rgba(255,216,117,0.25)]",
+              children: [
                 (0,o.jsxs)("div", {
-                  className: "mt-6 pt-5 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left",
+                  className: "flex items-center justify-between pb-3 mb-4 border-b border-[#ffd875]/30",
                   children: [
                     (0,o.jsxs)("div", {
-                      className: "text-[0.66rem] uppercase tracking-[0.2em] text-white/70",
                       children: [
-                        (0,o.jsx)("span", { children: "Logged responses: " }),
-                        (0,o.jsx)("strong", { className: "text-[#ffd875]", children: totalSaved })
+                        (0,o.jsx)("h3", { className: "font-display text-lg text-[#ffd875] font-normal", children: "👑 Client Host Portal" }),
+                        (0,o.jsx)("p", { className: "text-[0.62rem] uppercase tracking-[0.2em] text-white/70", children: "Private Host Dashboard & Reminders" })
+                      ]
+                    }),
+                    (0,o.jsxs)("span", {
+                      className: "px-2.5 py-1 rounded bg-[#ffd875]/20 text-[#ffd875] text-[0.68rem] font-title tracking-wider",
+                      children: [totalSaved, " RSVP", totalSaved === 1 ? "" : "s"]
+                    })
+                  ]
+                }),
+                (0,o.jsxs)("div", {
+                  className: "flex flex-col gap-2.5 mb-4",
+                  children: [
+                    (0,o.jsxs)("button", {
+                      type: "button",
+                      onClick: onDownloadExcel,
+                      className: "press flex items-center justify-center gap-2 rounded-md bg-[#3c270d] hover:bg-[#523714] border border-[#ffd875]/70 py-2.5 px-4 text-[0.68rem] uppercase tracking-[0.2em] text-white cursor-pointer shadow-md",
+                      children: [
+                        (0,o.jsx)("svg", {
+                          viewBox: "0 0 24 24",
+                          className: "h-4 w-4 fill-current text-[#ffd875]",
+                          children: (0,o.jsx)("path", { d: "M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" })
+                        }),
+                        (0,o.jsx)("span", { children: "Download Master Excel Sheet (.csv)" })
                       ]
                     }),
                     (0,o.jsxs)("button", {
                       type: "button",
-                      onClick: onDownloadExcel,
-                      className: "press inline-flex items-center gap-1.5 rounded border border-white/40 bg-[#342008]/80 px-3.5 py-1.5 text-[0.62rem] uppercase tracking-[0.22em] text-white hover:border-[#ffd875] cursor-pointer",
-                      title: "Download all RSVP entries as an Excel spreadsheet (.csv)",
+                      onClick: onCopyAllEmails,
+                      className: "press flex items-center justify-center gap-2 rounded-md bg-[#2d1e0a] hover:bg-[#422c0e] border border-white/40 py-2.5 px-4 text-[0.68rem] uppercase tracking-[0.2em] text-white cursor-pointer",
                       children: [
                         (0,o.jsx)("svg", {
                           viewBox: "0 0 24 24",
-                          className: "h-3.5 w-3.5 fill-current text-[#ffd875]",
-                          children: (0,o.jsx)("path", {
-                            d: "M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"
-                          })
+                          className: "h-3.5 w-3.5 fill-current text-white/80",
+                          children: (0,o.jsx)("path", { d: "M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" })
                         }),
-                        (0,o.jsx)("span", { children: "Download as Excel File" })
+                        (0,o.jsx)("span", { children: "Copy All Guest Emails for Reminder" })
+                      ]
+                    }),
+                    (0,o.jsxs)("button", {
+                      type: "button",
+                      onClick: onSendReminderEmail,
+                      className: "press flex items-center justify-center gap-2 rounded-md bg-[#2d1e0a] hover:bg-[#422c0e] border border-white/40 py-2.5 px-4 text-[0.68rem] uppercase tracking-[0.2em] text-white cursor-pointer",
+                      children: [
+                        (0,o.jsx)("svg", {
+                          viewBox: "0 0 24 24",
+                          className: "h-3.5 w-3.5 fill-current text-white/80",
+                          children: (0,o.jsx)("path", { d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" })
+                        }),
+                        (0,o.jsx)("span", { children: "Compose Reminder Email Blast" })
                       ]
                     })
                   ]
+                }),
+                copiedNotice && (0,o.jsx)("p", {
+                  className: "text-center text-[0.74rem] text-[#ffd875] bg-[#3a250a] py-1.5 px-3 rounded border border-[#ffd875]/30 mb-2",
+                  children: copiedNotice
+                }),
+                (0,o.jsx)("p", {
+                  className: "text-[0.6rem] text-white/60 text-center",
+                  children: "Responses are also delivered directly to " + targetEmail + " as guests reply."
                 })
               ]
             })

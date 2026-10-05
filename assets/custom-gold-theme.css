@@ -428,3 +428,18 @@ footer {
   font-size: 0.62rem !important;
   letter-spacing: 0.12em !important;
 }
+
+/* Client Host Portal (Private) */
+.client-admin-portal {
+  background: linear-gradient(180deg, rgba(45, 27, 8, 0.96) 0%, rgba(26, 15, 3, 0.98) 100%) !important;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 216, 117, 0.2) !important;
+  border-radius: 12px !important;
+}
+
+.client-admin-portal button {
+  transition: all 0.2s ease !important;
+}
+
+.client-admin-portal button:hover {
+  filter: brightness(1.15) !important;
+}
