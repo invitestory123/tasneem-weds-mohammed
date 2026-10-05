@@ -216,7 +216,7 @@ function W_RSVP(){
                         (0,o.jsxs)("button", {
                           type: "button",
                           onClick: () => setAttendance("yes"),
-                          className: "press flex items-center justify-center gap-2 rounded-md border py-3 px-3 text-[0.76rem] uppercase tracking-[0.16em] transition-all cursor-pointer " + (attendance === "yes" ? "border-[#ffd875] bg-[#755018] text-white font-semibold shadow-[0_0_15px_rgba(255,216,117,0.35)]" : "border-white/30 bg-[#2b1b0a]/70 text-white/80"),
+                          className: "press flex items-center justify-center gap-2 rounded-md border rsvp-attendance-btn py-1.5 px-2.5 text-[0.62rem] uppercase tracking-[0.12em] transition-all cursor-pointer " + (attendance === "yes" ? "border-[#ffd875] bg-[#755018] text-white font-semibold shadow-[0_0_15px_rgba(255,216,117,0.35)]" : "border-white/30 bg-[#2b1b0a]/70 text-white/80"),
                           children: [
                             (0,o.jsx)("span", { children: "✓" }),
                             (0,o.jsx)("span", { children: "Joyfully Accepts" })
@@ -225,7 +225,7 @@ function W_RSVP(){
                         (0,o.jsxs)("button", {
                           type: "button",
                           onClick: () => setAttendance("no"),
-                          className: "press flex items-center justify-center gap-2 rounded-md border py-3 px-3 text-[0.76rem] uppercase tracking-[0.16em] transition-all cursor-pointer " + (attendance === "no" ? "border-[#ffd875] bg-[#755018] text-white font-semibold shadow-[0_0_15px_rgba(255,216,117,0.35)]" : "border-white/30 bg-[#2b1b0a]/70 text-white/80"),
+                          className: "press flex items-center justify-center gap-2 rounded-md border rsvp-attendance-btn py-1.5 px-2.5 text-[0.62rem] uppercase tracking-[0.12em] transition-all cursor-pointer " + (attendance === "no" ? "border-[#ffd875] bg-[#755018] text-white font-semibold shadow-[0_0_15px_rgba(255,216,117,0.35)]" : "border-white/30 bg-[#2b1b0a]/70 text-white/80"),
                           children: [
                             (0,o.jsx)("span", { children: "✕" }),
                             (0,o.jsx)("span", { children: "Regretfully Declines" })
