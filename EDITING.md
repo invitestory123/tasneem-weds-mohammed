@@ -45,10 +45,21 @@ Edit `venue` in `editable/wedding-data.js`:
 - `mapsUrl`: Google Maps link
 - `mapEmbed`: Google Maps iframe embed URL
 
-### 6. Media & Music
+### 6. RSVP & Guest Responses
+Configured in `editable/wedding-data.js`:
+- `rsvp.email`: Target email for RSVP notifications (`"pookkanvazhi@gmail.com"`)
+- `rsvp.whatsapp`: Optional WhatsApp number to receive direct messages
+- `rsvp.heading`: Section title (`"RSVP"`)
+- `rsvp.subheading`: Welcoming guidance for guests
+- `rsvp.deadline`: Date by which to reply
+
+Guests can submit their RSVP via **WhatsApp** or **Email** (sent to `pookkanvazhi@gmail.com`). All responses are also saved and can be exported as an **Excel** (.csv) spreadsheet directly from the invitation by clicking the "Download as Excel File" button.
+
+### 7. Media & Music
 Replace files in `editable/assets/` or update paths in `wedding-data.js`:
 - `audio`: Background music (`mast-magan-instrumental.mp3`)
 - `songTitle`: Song title (`"Mast Magan (Instrumental)"`)
+- `playAfterWords`: Set to `true` to play background music right after the first verse of the words appears on screen
 - `cover`: Envelope cover illustration (`cover.png`)
 - `introVideo`: Entrance opening animation (`intro.mp4`)
 - `coupleVideo`: Couple loop video (`couple.mp4`)

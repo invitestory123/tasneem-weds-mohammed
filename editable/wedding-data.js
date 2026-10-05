@@ -17,7 +17,7 @@ window.WEDDING_DATA = {
   countdownTarget: "2027-09-25T19:00:00-04:00",
   countdownLabel: "Until the Darees",
 
-  storyKicker: "Bismillahir Rahmanir Raheem",
+  storyKicker: "Bismillah hir-Rahman nir-Rahim",
   storyTitle: "A Sacred Celebration of Blessings",
   story: [
     "With the benevolence of the Almighty Allah Subhanahu wa Ta'ala and the noble blessings of our elders, we gather in prayer, gratitude, and joyous celebration for the auspicious Darees of Mohammed & Tasneem.",
@@ -26,7 +26,7 @@ window.WEDDING_DATA = {
 
   eventsKicker: "Auspicious Gathering",
   eventsTitle: "Darees Mubarak",
-  eventsSubtitle: "An evening of prayers, Salawaat, and festive celebrations.",
+  eventsSubtitle: "An evening of prayers, Salawaat, and Khushi nu Jaman celebrations.",
 
   events: [
     {
@@ -34,7 +34,7 @@ window.WEDDING_DATA = {
       date: "Saturday, 25 September 2027",
       time: "7:00 PM",
       venue: "Dawoodi Bohra Al Masjid Al Saifee Anjuman-e-Burhani (Toronto)\n8929 Bayview Ave, Richmond Hill, ON L4B 4W4",
-      note: "Darees Mubarak followed by Salawaat dinner & blessings.",
+      note: "Darees Mubarak followed by Khushi nu Jaman & blessings.",
     },
   ],
 
@@ -44,6 +44,14 @@ window.WEDDING_DATA = {
     hint: "Richmond Hill, Ontario (Greater Toronto Area)",
     mapsUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x882b2b134584162d:0x626df4acd8863f41?entry=s&sa=X&ved=2ahUKEwjX0_KwwaCXAxVgw_ACHbqlEvYQ4kB6BAgDEAA&hl=en",
     mapEmbed: "https://www.google.com/maps?q=8929+Bayview+Ave,+Richmond+Hill,+ON+L4B+4W4&output=embed",
+  },
+
+  rsvp: {
+    email: "pookkanvazhi@gmail.com",
+    whatsapp: "",
+    heading: "RSVP",
+    subheading: "Kindly respond to honour us with your presence at the Darees Mubarak",
+    deadline: "Saturday, September 11, 2027",
   },
 
   closing: "With prayers, love, and gratitude, we eagerly await your presence.",
@@ -58,5 +66,6 @@ window.WEDDING_DATA = {
     floral: "./editable/assets/floral.png",
     audio: "./editable/assets/mast-magan-instrumental.mp3",
     songTitle: "Mast Magan (Instrumental)",
+    playAfterWords: true,
   },
 };
