@@ -46,7 +46,7 @@ p, span, small, a, button {
   text-shadow: 0 1px 4px rgba(30, 18, 4, 0.75) !important;
 }
 
-/* Couple Names & Gold-Text elements in radiant white */
+/* Couple Names & Gold-Text elements in radiant white — Large & Prominent */
 .gold-text {
   background: none !important;
   -webkit-background-clip: initial !important;
@@ -54,6 +54,35 @@ p, span, small, a, button {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
   text-shadow: 0 3px 20px rgba(30, 18, 4, 0.95), 0 0 28px rgba(255, 255, 255, 0.5) !important;
+}
+
+.hero-names,
+h1.gold-text {
+  font-size: clamp(3.8rem, 19vw, 5.8rem) !important;
+  line-height: 1.05 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.02em !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.75rem !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 3px 20px rgba(25, 14, 2, 0.95), 0 0 35px rgba(255, 255, 255, 0.45) !important;
+}
+
+.hero-names span,
+h1.gold-text span {
+  font-size: 0.42em !important;
+  letter-spacing: 0.35em !important;
+  margin-top: 0.6rem !important;
+  margin-bottom: 0.6rem !important;
+  display: block !important;
+  color: #ffffff !important;
+  opacity: 0.95 !important;
+}
+
+footer .gold-text {
+  font-size: clamp(2.8rem, 13vw, 3.8rem) !important;
+  line-height: 1.1 !important;
 }
 
 /* Hero Section */
