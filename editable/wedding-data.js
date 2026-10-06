@@ -20,13 +20,13 @@ window.WEDDING_DATA = {
   storyKicker: "Bismillah hir-Rahman nir-Rahim",
   storyTitle: "A Sacred Celebration of Blessings",
   story: [
-    "With the benevolence of the Almighty Allah Subhanahu wa Ta'ala and the noble blessings of our elders, we gather in prayer, gratitude, and joyous celebration for the auspicious Darees of Mohammed & Tasneem.",
+    "With the benevolence of the Almighty Allah Subhanahu wa Ta'ala and the noble blessings of our elders, we gather in prayer, gratitude, and joyous celebration for the auspicious Darees of Tasneem & Mohammed.",
     "Your esteemed presence, blessings, and heartfelt prayers will grace our celebration with warmth, joy, and barakah as we embark on this sacred journey together.",
   ],
 
   eventsKicker: "Auspicious Gathering",
   eventsTitle: "Darees Mubarak",
-  eventsSubtitle: "An evening of prayers, Salawaat, and Khushi nu Jaman celebrations.",
+  eventsSubtitle: "An evening of prayers and Khushi nu Jaman celebrations.",
 
   events: [
     {
@@ -47,8 +47,8 @@ window.WEDDING_DATA = {
   },
 
   rsvp: {
-    email: "pookkanvazhi@gmail.com",
-    whatsapp: "",
+    email: "Modada1523@gmail.com",
+    whatsapp: "+16478247786",
     heading: "RSVP",
     subheading: "Kindly respond to honour us with your presence at the Darees Mubarak",
     deadline: "Saturday, September 11, 2027",

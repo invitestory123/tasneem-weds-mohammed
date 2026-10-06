@@ -85,6 +85,62 @@ footer .gold-text {
   line-height: 1.1 !important;
 }
 
+/* Cover Screen Center Medallion */
+.cover-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  max-width: 250px !important;
+  pointer-events: auto !important;
+}
+
+.cover-kicker {
+  font-family: var(--font-body, system-ui, sans-serif) !important;
+  font-size: 0.58rem !important;
+  letter-spacing: 0.42em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+  margin-bottom: 1.35rem !important;
+}
+
+.cover-names,
+h1.cover-names {
+  font-family: var(--font-display, "Cinzel", Georgia, serif) !important;
+  font-size: clamp(1.35rem, 5.2vw, 1.8rem) !important;
+  line-height: 1.1 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.03em !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 22px rgba(255, 235, 175, 0.65) !important;
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.cover-names span,
+h1.cover-names span {
+  font-family: var(--font-title, "Cinzel", serif) !important;
+  font-size: 0.44em !important;
+  letter-spacing: 0.3em !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  display: block !important;
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.2rem !important;
+}
+
+.cover-date {
+  font-family: var(--font-title, "Cinzel", serif) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.34em !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+  margin-top: 1.45rem !important;
+  margin-bottom: 2.25rem !important;
+}
+
 /* Hero Section */
 section.bg-\[\#150e04\] {
   background: linear-gradient(180deg, #593c0c 0%, #7d5716 35%, #9b7020 70%, #6e4a11 100%) !important;

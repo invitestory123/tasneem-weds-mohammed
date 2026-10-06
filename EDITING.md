@@ -47,21 +47,21 @@ Edit `venue` in `editable/wedding-data.js`:
 
 ### 6. RSVP & Guest Responses
 Configured in `editable/wedding-data.js`:
-- `rsvp.email`: Target email for RSVP notifications (`"pookkanvazhi@gmail.com"`)
-- `rsvp.whatsapp`: Optional WhatsApp number to receive direct messages
+- `rsvp.email`: Target email for RSVP notifications (`"Modada1523@gmail.com"`)
+- `rsvp.whatsapp`: Target WhatsApp number to receive direct messages (`"+16478247786"`)
 - `rsvp.heading`: Section title (`"RSVP"`)
 - `rsvp.subheading`: Welcoming guidance for guests
 - `rsvp.deadline`: Date by which to reply
 
 #### For Guests:
-Guests submit their RSVP via **WhatsApp** or **Email** (sent to `pookkanvazhi@gmail.com`), entering their Full Name, Email Address, Attendance, and Guest Count. Guests **do not** see the Excel download button or internal logs.
+Guests submit their RSVP via **WhatsApp** (sent directly to `+16478247786`) or **Email** (sent to `Modada1523@gmail.com`), entering their Full Name, Email Address, Attendance, and Guest Count. Guests **do not** see the Excel download button or internal logs.
 
 #### For the Client (Private Host Portal):
 The client/host can access the private Host Portal by opening the link with `?admin=true` (e.g. `https://.../?admin=true#rsvp`) or clicking the discreet "Host Portal" link in the footer:
 - **Download Master Excel Sheet (.csv / .xlsx)**: Exports all recorded guest submissions into an Excel-formatted spreadsheet.
 - **Copy All Guest Emails**: Copies all submitted guest emails into clipboard so the client can paste into Gmail's BCC field.
 - **Compose Reminder Email Blast**: 1-click button that opens the client's email app with all guest emails in BCC and a pre-composed Darees reminder message ready to send!
-- In addition, all email RSVPs are delivered directly to **`pookkanvazhi@gmail.com`** in real time as guests submit.
+- In addition, all email RSVPs are delivered directly to **`Modada1523@gmail.com`** in real time as guests submit.
 
 ### 7. Media & Music
 Replace files in `editable/assets/` or update paths in `wedding-data.js`:
